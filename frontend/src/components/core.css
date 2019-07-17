@@ -1,0 +1,117 @@
+.table {
+  border: 7px solid #4169e1;
+  border-collapse: collapse;
+  width: 90%;
+  margin: auto;
+  border-style: groove;
+}
+
+td, th /* Mettre une bordure sur les td ET les th */ {
+  font-family: monospace;
+  border: 1px dotted #ff6347ed;
+  padding: 5px;
+  background-color: #ffb6c1;
+  width: 25%;
+  vertical-align: Middle;
+  color: blue;
+}
+
+td#table {
+  background-color: #ff6347;
+}
+
+.form {
+  /* Uniquement centrer le formulaire sur la page */
+  margin: 0 auto;
+  width: 80vw;
+  /* Encadré pour voir les limites du formulaire */
+  padding: 1em;
+  border: 4px solid #6a5acd;
+  border-radius: 5em;
+  background-color: #ff6347;
+}
+
+form div + div {
+  margin-top: 1em;
+}
+
+label {
+  /* Pour être sûrs que toutes les étiquettes ont même taille et sont correctement alignées */
+  display: inline-block;
+  width: none;
+  text-align: right;
+}
+
+input,
+textarea {
+  /* Pour s'assurer que tous les champs texte ont la même police.
+       Par défaut, les textarea ont une police monospace */
+  font: 1em sans-serif;
+
+  /* Pour que tous les champs texte aient la même dimension */
+  width: 30vw;
+  box-sizing: border-box;
+
+  /* Pour harmoniser le look & feel des bordures des champs texte */
+  border: 1px solid #999;
+}
+
+input:focus,
+textarea:focus {
+  /* Pour souligner légèrement les éléments actifs */
+  border-color: #6a5acd;
+}
+
+textarea {
+  /* Pour aligner les champs texte multi‑ligne avec leur étiquette */
+  vertical-align: top;
+
+  /* Pour donner assez de place pour écrire du texte */
+  height: 5em;
+  width: 40em;
+}
+
+.button {
+  /* Pour placer le bouton à la même position que les champs texte */
+  padding-left: 10vw; /* même taille que les étiquettes */
+}
+
+button {
+  /* Cette marge supplémentaire représente grosso modo le même espace que celui
+       entre les étiquettes et les champs texte */
+  margin-left: 0.5em;
+}
+
+.border {
+  border: px red;
+  margin: 0 auto;
+  padding: 30px 30px 30px;
+  background-color: #ff6347ed;
+  border-radius: 5em;
+  font-size: 25px;
+  font-family: "Amatic SC", cursive;
+  position: relative;
+  right: 20px;
+}
+
+h3 {
+  right: 25px;
+  font-size: 30px;
+  text-shadow: 3px 3px 5px red;
+  color: #0000cd;
+}
+
+h2 {
+  font-size: 40px;
+  text-shadow: 3px 3px 5px red;
+  color: #191970;
+}
+.body {
+  margin: 0 auto;
+  padding: 0 20px 20px 20px;
+  border: 0px solid black;
+  background-image: url(https://st3.depositphotos.com/12837522/18441/v/1600/depositphotos_184414020-stock-illustration-sunlight-retro-faded-background-pale.jpg);
+  background-position: center;
+  color: white;
+  background-color: black;
+}

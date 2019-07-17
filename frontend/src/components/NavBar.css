@@ -1,0 +1,25 @@
+.navBar {
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+  text-decoration: none;
+  color: #4b0082;
+  font-size: 25px;
+  font-weight: bold;
+  text-shadow: 3px 3px 5px red;
+}
+
+h1,
+h2,
+h3,
+li {
+  font-family: "Amatic SC", cursive;
+  text-align: center;
+  font-weight: bold;
+}
+
+.h1 {
+  font-size: 80px;
+  text-shadow: 4px 4px 5px red;
+  color: #c71585;
+  letter-spacing: 0.5em;
+}
