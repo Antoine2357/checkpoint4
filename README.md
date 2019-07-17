@@ -102,3 +102,123 @@ SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
 
 ---
+
+admin
+
+## -- MySQL dump 10.13 Distrib 5.7.26, for Linux (x86_64)
+
+-- Host: localhost Database: check
+
+---
+
+-- Server version 5.7.26-0ubuntu0.18.04.1
+
+/_!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT _/;
+/_!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS _/;
+/_!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION _/;
+/_!40101 SET NAMES utf8 _/;
+/_!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE _/;
+/_!40103 SET TIME_ZONE='+00:00' _/;
+/_!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 _/;
+/_!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 _/;
+/_!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' _/;
+/_!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 _/;
+
+--
+-- Table structure for table `admin`
+--
+
+DROP TABLE IF EXISTS `admin`;
+/_!40101 SET @saved_cs_client = @@character_set_client _/;
+/_!40101 SET character_set_client = utf8 _/;
+CREATE TABLE `admin` (
+`idadmin` int(11) NOT NULL AUTO_INCREMENT,
+`user` varchar(45) NOT NULL,
+`password` varchar(450) NOT NULL,
+PRIMARY KEY (`idadmin`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+/_!40101 SET character_set_client = @saved_cs_client _/;
+
+--
+-- Dumping data for table `admin`
+--
+
+LOCK TABLES `admin` WRITE;
+/_!40000 ALTER TABLE `admin` DISABLE KEYS _/;
+INSERT INTO `admin` VALUES (1,'admin','$2b$10\$hMfc4fhBxQ1ixIaZH1iAyupc9cc9MWfxVpIfaGJ9BLU4ZabfuIUwK');
+/_!40000 ALTER TABLE `admin` ENABLE KEYS _/;
+UNLOCK TABLES;
+/_!40103 SET TIME_ZONE=@OLD_TIME_ZONE _/;
+
+/_!40101 SET SQL_MODE=@OLD_SQL_MODE _/;
+/_!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS _/;
+/_!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS _/;
+/_!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT _/;
+/_!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS _/;
+/_!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION _/;
+/_!40111 SET SQL_NOTES=@OLD_SQL_NOTES _/;
+
+## -- MySQL dump 10.13 Distrib 5.7.26, for Linux (x86_64)
+
+-- Host: localhost Database: check
+
+---
+
+-- Server version 5.7.26-0ubuntu0.18.04.1
+
+/_!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT _/;
+/_!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS _/;
+/_!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION _/;
+/_!40101 SET NAMES utf8 _/;
+/_!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE _/;
+/_!40103 SET TIME_ZONE='+00:00' _/;
+/_!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 _/;
+/_!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 _/;
+/_!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' _/;
+/_!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 _/;
+
+--
+-- Table structure for table `performances`
+--
+
+DROP TABLE IF EXISTS `performances`;
+/_!40101 SET @saved_cs_client = @@character_set_client _/;
+/_!40101 SET character_set_client = utf8 _/;
+CREATE TABLE `performances` (
+`idperformances` int(11) NOT NULL,
+`laught` text,
+`dream` text,
+`marvel_at` text,
+`about` text,
+`price1` varchar(45) DEFAULT NULL,
+`price2` varchar(45) DEFAULT NULL,
+`price3` varchar(45) DEFAULT NULL,
+`price4` varchar(45) DEFAULT NULL,
+`price5` varchar(45) DEFAULT NULL,
+`price6` varchar(45) DEFAULT NULL,
+`price7` varchar(45) DEFAULT NULL,
+`price8` varchar(45) DEFAULT NULL,
+PRIMARY KEY (`idperformances`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/_!40101 SET character_set_client = @saved_cs_client _/;
+
+--
+-- Dumping data for table `performances`
+--
+
+LOCK TABLES `performances` WRITE;
+/_!40000 ALTER TABLE `performances` DISABLE KEYS _/;
+INSERT INTO `performances` VALUES (1,'TEST','TEST','TEST','TEST','0','0','0','0','0','0','0','0');
+/_!40000 ALTER TABLE `performances` ENABLE KEYS _/;
+UNLOCK TABLES;
+/_!40103 SET TIME_ZONE=@OLD_TIME_ZONE _/;
+
+/_!40101 SET SQL_MODE=@OLD_SQL_MODE _/;
+/_!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS _/;
+/_!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS _/;
+/_!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT _/;
+/_!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS _/;
+/_!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION _/;
+/_!40111 SET SQL_NOTES=@OLD_SQL_NOTES _/;
+
+-- Dump completed on 2019-07-17 10:45:56
