@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 import AuthService from "./AuthService/AuthService";
 import axios from "axios";
 import { serverAddress } from "../conf";
-const Auth = new AuthService();
 class Core extends Component {
   constructor(props) {
     super(props);
