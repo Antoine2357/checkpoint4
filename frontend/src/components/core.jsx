@@ -1,6 +1,4 @@
 import React, { Component, Fragment } from "react";
-import { Container, Row, Col } from "reactstrap";
-import header from "./header";
 import Header from "./header";
 import "./core.css";
 import { Link } from "react-router-dom";
@@ -24,7 +22,11 @@ class Core extends Component {
       price5: "",
       price6: "",
       price7: "",
-      price8: ""
+      price8: "",
+      email: "",
+      message: "",
+      alertEmptyField: "",
+      alertMail: ""
     };
   }
   componentDidMount() {
@@ -44,6 +46,24 @@ class Core extends Component {
         price7: data.price7,
         price8: data.price8
       });
+    });
+  }
+
+  onInputChange(e) {
+    this.setState({
+      [e.target.name]: e.target.value
+    });
+  }
+
+  submit() {
+    axios.post(`${serverAddress}contact`, {
+      email: this.state.email,
+      message: this.state.message
+    });
+    this.setState({
+      pseudo: "",
+      email: "",
+      message: ""
     });
   }
 
@@ -112,17 +132,31 @@ class Core extends Component {
           <section>
             <h2 id="contact">Contact Us</h2>
 
-            <form className="form" action="/formulaire" method="post">
+            <form
+              className="form"
+              onSubmit={e => {
+                this.Submit(e);
+              }}
+            >
               <div>
                 <label htmlFor="mail">e-mail :</label>
-                <input type="email" id="mail" name="user_mail" />
+                <input
+                  onChange={e => this.onInputChange(e)}
+                  type="email"
+                  id="mail"
+                  name="email"
+                />
               </div>
-
               <div>
                 <label htmlFor="msg">Message :</label>
-                <textarea id="msg" name="user_message" rows="10" cols="50" />
+                <textarea
+                  onChange={e => this.onInputChange(e)}
+                  id="msg"
+                  name="message"
+                  rows="10"
+                  cols="50"
+                />
               </div>
-
               <div className="button">
                 <button type="submit">Send message</button>
               </div>

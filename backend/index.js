@@ -71,15 +71,14 @@ app.post("/login", (req, res) => {
 });
 
 app.post("/contact", (req, res) => {
-  const pseudo = req.body.pseudo;
   const email = req.body.email;
   const message = req.body.message;
 
   let HelperOptions = {
-    from: `${pseudo} <${email}>`,
+    from: ` <${email}>`,
     to: "betinvestwild@gmail.com",
     subject: `Contact Bet2Invest.com`,
-    html: `<h3>Message de : ${pseudo}; ${email}</h3>
+    html: `<h3>Message de : ${email}</h3>
     <p>${message}</p>`
   };
 
@@ -87,7 +86,7 @@ app.post("/contact", (req, res) => {
     if (error) {
       res.sendStatus(500);
     } else {
-      res.sendStatus(200);
+      res.sendStatus(200).json({ message: "message envoyé" });
     }
   });
 });

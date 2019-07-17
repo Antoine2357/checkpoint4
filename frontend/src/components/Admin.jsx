@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { Form, FormGroup, Label, Input } from "reactstrap";
-import { Link } from "react-router-dom";
 import AuthService from "./AuthService/AuthService";
 
 class Admin extends Component {

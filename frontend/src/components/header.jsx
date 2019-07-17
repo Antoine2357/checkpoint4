@@ -3,19 +3,11 @@ import {
   Collapse,
   Navbar,
   NavbarToggler,
-  NavbarBrand,
   Nav,
   NavItem,
-  NavLink,
-  Button,
-  Dropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem
+  NavLink
 } from "reactstrap";
 import "./NavBar.css";
-import axios from "axios";
-import { Link } from "react-router-dom";
 
 class Header extends React.Component {
   constructor(props) {
